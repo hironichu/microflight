@@ -1,0 +1,15 @@
+<form hx-post="/x/flights" hx-target="this" hx-swap="outerHTML">
+
+  <input type="hidden" name="id" value="<%= it.id %>" />
+  <input type="text" name="flightNumber" value="<%= it.flightNumber %>" placeholder="Flight number" />
+  <input type="text" name="origin" value="<%= it.origin %>" placeholder="Origin" />
+  <input type="text" name="destination" value="<%= it.destination %>" placeholder="Destination" />
+  <input type="text" name="date" value="<%= it.date %>" placeholder="Date" />
+  <input type="text" name="company" value="<%= it.informationAeroplane.company %>" placeholder="Airline" />
+  <input type="text" name="modele" value="<%= it.informationAeroplane.modele %>" placeholder="Aircraft" />
+
+  <footer>
+    <button class="btn" hx-get="/x/flights">Cancel</button>
+    <button class="btn primary">Save</button>
+  </footer>
+</form>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"deno.lint": true,
+		"deno.unstable": true,
+		"deno.enable": true,
+		"deno.config": "./deno.jsonc"
+	}
+}

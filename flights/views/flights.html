@@ -1,0 +1,55 @@
+<ul class="flights">
+  <% it.flights.forEach(flight=> { %>
+    <li>
+      <header>
+        <h2>
+          <%= flight.origin %> - <%= flight.destination %>
+        </h2>
+        <nav>
+          <button class="ed" hx-get="/x/flights/<%= flight.id %>">
+            📝
+          </button>
+          <button class="rm" hx-delete="/x/flights/<%= flight.id %>" hx-confirm="Are you sure?">
+            🗑️
+          </button>
+        </nav>
+      </header>
+
+      <p>Flight number : <%= flight.flightNumber %>
+      </p>
+      <p>Origin : <%= flight.origin %>
+      </p>
+      <p>Destination = <%= flight.destination %>
+      </p>
+      <p>Date : <%= flight.date %>
+      </p>
+      <p>
+        Nombre de siege : <%= flight.sieges.length %>
+      </p>
+      <!-- Add list of seats using a table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Seat Name</th>
+            <th>Seat Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% flight.sieges && flight.sieges.forEach(function(seat) { %>
+            <tr>
+              <td><input type="text" disabled name="seatName" value="<%= seat.name %>" placeholder="Seat Name" /></td>
+              <!-- <td><input type="text" name="seatStatus" value="<%= seat.status %>" placeholder="Seat Status" /></td> -->
+              <!-- Replace the above input with an option using Available and Occupied -->
+              <td>
+                <select name="seatStatus">
+                  <option value="Available" <%= seat.status === 'Available' ? 'selected' : '' %>>Available</option>
+                  <option value="Occupied" <%= seat.status === 'Occupied' ? 'selected' : '' %>>Occupied</option>
+                </select>
+              </td>
+            </tr>
+            <% }); %>
+        </tbody>
+      </table>
+    </li>
+    <% }) %>
+</ul>
