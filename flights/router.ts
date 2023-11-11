@@ -2,17 +2,12 @@
 
 // import { getFlight, EmptyFlight, getFlights, createFlight, updateFlight, deleteFlight, searchFlights } from "./services/service.ts";
 
-
-
-
 // async function searchFlightHandler(ctx: Context) {
 //   const key = ctx.request.url.searchParams.get("key");
 //   ctx.render("flights.html", {
 //     flights: await searchFlights(key ?? "")
 //   })
 // }
-
-
 
 // async function createFlightHandler(ctx: Context) {
 //   const body = await ctx.request.body().value;
@@ -35,8 +30,6 @@
 //   });
 // }
 
-
-
 // async function flightFormHandler(ctx: Context) {
 //   const {id} = ctx.params;
 //   const flight = id ? await getFlight(id) : EmptyFlight;
@@ -56,7 +49,6 @@
 //   .get("/x/flight/form/:id?", flightFormHandler)
 //   .post("/x/flights", createFlightHandler)
 //   .delete("/x/flights/:id", deleteFlightHandler)
-
 
 //   .get("/main.css", cssHandler)
 //   .get("/hero.jpg", imgHandler);

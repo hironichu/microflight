@@ -1,1 +1,1 @@
-export * from "./flights.service.ts"
+export * from "./flights.service.ts";

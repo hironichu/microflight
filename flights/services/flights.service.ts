@@ -99,15 +99,15 @@ export const updateFlight = async (
  * @returns {Promise<void>}
  */
 export const deleteFlight = async (id: string): Promise<void> => {
-    return await flightsRepo.deleteFlight(id);
+  return await flightsRepo.deleteFlight(id);
 };
 
 export const createFlight = async (flightData: Partial<Flight>) => {
-    flightData.sieges = EmptyFlight.sieges;
-    const result = await flightsRepo.createFlight(flightData);
-    return result;
-}
+  flightData.sieges = EmptyFlight.sieges;
+  const result = await flightsRepo.createFlight(flightData);
+  return result;
+};
 
 export const searchFlight = async (key: string) => {
-    return await flightsRepo.searchFlights(key ?? "");
-}
+  return await flightsRepo.searchFlights(key ?? "");
+};

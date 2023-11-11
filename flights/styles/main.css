@@ -146,3 +146,66 @@
     margin: 5px 0 0;
   }
 
+   .sieges {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 18px;
+    background: #2b2b2b;
+    box-shadow: inset black 0 0 10px 3px;
+    width: 166px;
+    padding: 39px;
+    height: 536px;
+    border-radius: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+		>.siege {
+			background-color: #1f88e1;
+			border-radius: 5px;
+			color: white;
+			height: 35px;
+			width: 35px;
+			margin: auto;
+			&::before {
+				content: attr(data-siege);
+				font-size: 15px;
+				margin: auto;
+				width: 30px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+	.siege.siege1 { grid-area: 1 / 1 / 2 / 2; }
+	.siege.siege2 { grid-area: 1 / 2 / 2 / 3; }
+	.siege.siege3 { grid-area: 2 / 1 / 3 / 2; }
+	.siege.siege4 { grid-area: 3 / 1 / 4 / 2; }
+	.siege.siege5 { grid-area: 3 / 2 / 4 / 3; }
+	.siege.siege6 { grid-area: 4 / 1 / 5 / 2; }
+	.siege.siege7 { grid-area: 5 / 1 / 6 / 2; }
+	.siege.siege8 { grid-area: 4 / 2 / 5 / 3; }
+	.siege.siege9 { grid-area: 5 / 2 / 6 / 3; }
+	.siege.siege10 { grid-area: 6 / 1 / 7 / 2; }
+	.siege.siege11 { grid-area: 6 / 2 / 7 / 3; }
+	.siege.siege12 { grid-area: 7 / 1 / 8 / 2; }
+	.siege.siege13 { grid-area: 7 / 2 / 8 / 3; }
+	.siege.siege14 { grid-area: 8 / 1 / 9 / 2; }
+	.siege.siege15 { grid-area: 8 / 2 / 9 / 3; }
+	.siege.siege16 { grid-area: 2 / 2 / 3 / 3; }
+	.siege.siege17 { grid-area: 1 / 3 / 2 / 4; }
+	.siege.siege18 { grid-area: 2 / 3 / 3 / 4; }
+	.siege.siege19 { grid-area: 3 / 3 / 4 / 4; }
+	.siege.siege20 { grid-area: 4 / 3 / 5 / 4; }
+	.siege.siege21 { grid-area: 5 / 3 / 6 / 4; }
+	.siege.siege22 { grid-area: 6 / 3 / 7 / 4; }
+	.siege.siege23 { grid-area: 7 / 3 / 8 / 4; }
+	.siege.siege24 { grid-area: 8 / 3 / 9 / 4; }
+	.siege.siege25 { grid-area: 9 / 3 / 10 / 4; }
+	.siege.siege26 { grid-area: 10 / 3 / 11 / 4; }
+	.siege.siege27 { grid-area: 9 / 2 / 10 / 3; }
+	.siege.siege28 { grid-area: 10 / 2 / 11 / 3; }
+	.siege.siege29 { grid-area: 9 / 1 / 10 / 2; }
+	.siege.siege30 { grid-area: 10 / 1 / 11 / 2; }

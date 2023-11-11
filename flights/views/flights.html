@@ -26,30 +26,13 @@
       <p>
         Nombre de siege : <%= flight.sieges.length %>
       </p>
-      <!-- Add list of seats using a table -->
-      <table>
-        <thead>
-          <tr>
-            <th>Seat Name</th>
-            <th>Seat Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% flight.sieges && flight.sieges.forEach(function(seat) { %>
-            <tr>
-              <td><input type="text" disabled name="seatName" value="<%= seat.name %>" placeholder="Seat Name" /></td>
-              <!-- <td><input type="text" name="seatStatus" value="<%= seat.status %>" placeholder="Seat Status" /></td> -->
-              <!-- Replace the above input with an option using Available and Occupied -->
-              <td>
-                <select name="seatStatus">
-                  <option value="Available" <%= seat.status === 'Available' ? 'selected' : '' %>>Available</option>
-                  <option value="Occupied" <%= seat.status === 'Occupied' ? 'selected' : '' %>>Occupied</option>
-                </select>
-              </td>
-            </tr>
-            <% }); %>
-        </tbody>
-      </table>
+      <!-- Add list of seats using a div with the .sieges grid and .siege .siegeXX class -->
+	  <div class="sieges">
+		<% flight.sieges.forEach((siege, key) => { %>
+		  <div class="siege siege<%=key + 1%>" data-occupied="<%= siege.status == 'occupied' ? '1' : '0' %>" data-siege="<%= siege.name %>"></div>
+		<% }) %>
+	  </div>
+
     </li>
     <% }) %>
 </ul>

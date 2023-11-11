@@ -14,4 +14,4 @@ async function imgHandler(ctx: Context) {
   });
 }
 
-export { cssHandler, imgHandler }
+export { cssHandler, imgHandler };
